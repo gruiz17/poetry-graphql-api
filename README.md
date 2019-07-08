@@ -27,5 +27,50 @@ Here are some examples, though:
 
 Sorry this is sparse, but just, for now:
 
-* `rails db:migrate` to set up the schema,
-* `rails db:seed` to set up the testing data
+1. `rails db:migrate` to set up the schema,
+2. `rails db:seed` to set up the testing data
+3. `rails s` to start up, and...
+4. You're ready to send queries! Just send a query to `/graphql` and you'll see the results. 
+
+## Querying example
+
+1. In headers: `Content-Type`: `application/json`
+2. Request URL: `http://localhost:3000/graphql`
+3. For the body (in raw JSON), send this:
+
+```
+{
+    "query" : "query { authors { poems { title } } }"
+}
+```
+
+And you should get something like this back:
+
+```
+{
+    "data": {
+        "authors": [
+            {
+                "poems": [
+                    {
+                        "title": "Sonnet I"
+                    },
+                    {
+                        "title": "Sonnet II"
+                    }
+                ]
+            },
+            {
+                "poems": [
+                    {
+                        "title": "Lovers Infiniteness"
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+
+
