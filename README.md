@@ -1,24 +1,23 @@
-# README
+# Poetry GraphQL API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built to teach myself about how to use GraphQL with Rails.
 
-Things you may want to cover:
+So far, only supports querying.
 
-* Ruby version
+Here are some examples, though:
 
-* System dependencies
+### Getting Authors by last name:
 
-* Configuration
+### Getting titles of poems authors have written:
 
-* Database creation
+### Getting the lines of each poem:
 
-* Database initialization
+### You can also get line numbers!
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# Getting started
 
-* Deployment instructions
+Sorry this is sparse, but just, for now:
 
-* ...
+* `rails db:migrate` to set up the schema,
+* `rails db:seed` to set up the testing data
